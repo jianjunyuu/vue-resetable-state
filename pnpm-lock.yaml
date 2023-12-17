@@ -7,7 +7,6 @@ importers:
       '@antfu/eslint-config': ^0.25.2
       '@antfu/ni': ^0.16.3
       '@antfu/utils': ^0.5.2
-      '@types/lodash': ^4.14.202
       '@types/lodash-es': ^4.17.12
       '@types/node': ^18.0.3
       bumpp: ^8.2.1
@@ -29,7 +28,6 @@ importers:
       '@antfu/eslint-config': 0.25.2_4x5o4skxv6sl53vpwefgt23khm
       '@antfu/ni': 0.16.3
       '@antfu/utils': 0.5.2
-      '@types/lodash': 4.14.202
       '@types/lodash-es': 4.17.12
       '@types/node': 18.0.3
       bumpp: 8.2.1

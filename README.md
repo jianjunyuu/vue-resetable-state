@@ -35,10 +35,13 @@ Takes an inner value and returns a reactivity and mutable、resetable object, wh
 
 - Type
 	```ts
-	function useResetableState<T extends ResetableStateCollections>(initialState: MaybeRef<T>, options?: {
-	  autoPull?: boolean
-	  exclued?: (keyof T)[]
-	}): ResetableState<ReactiveState<T>>
+	function useResetableState<T extends ResetableStateCollections>(
+	  initialState: MaybeRef<T>,
+	  options?: {
+	    autoPull?: boolean
+	    exclued?: (keyof T)[]
+	  }
+	): ResetableState<ReactiveState<T>>
 
 	type BaseTypes = string | number | boolean | undefined | null
 	type ResetableStateCollections = {

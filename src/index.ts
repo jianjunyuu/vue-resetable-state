@@ -6,7 +6,7 @@ import {
   shallowReactive,
   watch,
 } from 'vue-demi'
-import { cloneDeep, isEqual, isObject, omit } from 'lodash-es'
+import { cloneDeep, has as hasOwn, isEqual, isObject, omit } from 'lodash-es'
 
 export type BaseTypes = string | number | boolean | undefined | null
 export type ResetableStateCollections =
@@ -112,7 +112,7 @@ function updateState<T extends ResetableStateCollections, K extends keyof T>(
     const keys = Object.keys(target) as K[]
     keys.forEach((k) => {
       if (
-        Object.hasOwn(target, k) && (!excluedKeys || excluedKeys.includes(k))
+        hasOwn(target, k) && (!excluedKeys || excluedKeys.includes(k))
       ) {
         target[k] = isObject(source[k])
           ? reactive(cloneDeep(source[k]) as any)

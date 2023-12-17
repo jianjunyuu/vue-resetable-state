@@ -54,6 +54,10 @@
       "optional": true
     }
   },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "vue-demi": "^0.14.6"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@antfu/ni": "^0.16.3",
@@ -70,9 +74,5 @@
     "vite": "^3.0.2",
     "vitest": "^0.18.1",
     "vue": "^3"
-  },
-  "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vue-demi": "^0.14.6"
   }
 }

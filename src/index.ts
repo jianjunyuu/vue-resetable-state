@@ -9,11 +9,10 @@ import {
 import { cloneDeep, has as hasOwn, isEqual, isObject, omit } from 'lodash-es'
 
 export type BaseTypes = string | number | boolean | undefined | null
-export type ResetableStateCollections =
-  | {
-    [K: string | number]: ResetableStateCollections | BaseTypes
-  }
-  | Array<ResetableStateCollections | BaseTypes>
+interface PlainObject<T> { [K: number | string]: T | PlainObject<T> | NestedArray<T> }
+type NestedArray<T> = Array<T | NestedArray<T> | PlainObject<T>>
+
+type ResetableStateCollections = PlainObject<BaseTypes> | NestedArray<BaseTypes>
 
 export type ReactiveState<T extends ResetableStateCollections> = ReturnType<typeof reactive<T>>
 export interface ResetableState<T> {
